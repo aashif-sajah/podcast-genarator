@@ -1,0 +1,20 @@
+name: "Podcast Gen"
+author: "Aashif sajah"
+description: "Genarate Feed for Podcast from a YML file"
+runs:
+  using: "docker"
+  image: "DockerFile"
+branding:
+  icon: "git-branch"
+  color: "red"
+inputs:
+  email:
+    descriptin: The Commitors Email adress
+    required: True
+    default: {{ github.actor }}@localhost
+  name:
+    descriptin: The Commitors Namw
+    required: True
+    default: {{ github.actor }}
+  
+    
